@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery Design | Taichi Matsusaki Portfolio</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <script>
+      window.addEventListener("load", () => {
+        const navigationEntry = performance.getEntriesByType?.("navigation")?.[0];
+        const isReload =
+          navigationEntry?.type === "reload" ||
+          (!navigationEntry && window.performance?.navigation?.type === 1);
+
+        if (isReload) {
+          window.scrollTo(0, 0);
+        }
+
+        document.body.classList.add("page-ready");
+
+        const menuButton = document.querySelector(".top-menu-toggle");
+        const navigation = document.querySelector(".top-nav");
+
+        if (!menuButton || !navigation) {
+          return;
+        }
+
+        const closeMenu = () => {
+          menuButton.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("nav-open");
+        };
+
+        menuButton.addEventListener("click", () => {
+          const expanded = menuButton.getAttribute("aria-expanded") === "true";
+          menuButton.setAttribute("aria-expanded", String(!expanded));
+          document.body.classList.toggle("nav-open", !expanded);
+        });
+
+        navigation.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+
+        window.matchMedia("(min-width: 641px)").addEventListener("change", (event) => {
+          if (event.matches) {
+            closeMenu();
+          }
+        });
+      });
+    </script>
+  </head>
+  <body class="top-entry detail-page">
+    <div class="page-shell detail-page-shell" id="top">
+      <header class="top-header">
+        <a class="top-logo" href="../../index.html">Taichi Matsusaki</a>
+        <button
+          class="top-menu-toggle material-symbols-outlined"
+          type="button"
+          aria-label="メニューを開く"
+          aria-controls="detail-navigation"
+          aria-expanded="false"
+        >
+          menu
+        </button>
+        <nav class="top-nav" id="detail-navigation" aria-label="Primary navigation">
+          <a href="../../index.html">Home</a>
+          <a href="../index.html">Works</a>
+          <a href="../../about/index.html">About</a>
+        </nav>
+      </header>
+
+      <main class="detail-main">
+        <section class="detail-intro">
+          <div class="detail-tags" aria-label="Project tags">
+            <span class="detail-tag">Space Design</span>
+            <span class="detail-tag">Exhibition</span>
+          </div>
+          <h1>Gallery Design</h1>
+          <div class="detail-hero-media">
+            <img src="../../images/gallery-design-thumb.jpg" alt="Gallery Design" />
+          </div>
+          <p class="detail-lead">
+            ギャラリー空間における視線の流れと展示の切り替わり方を整理し、色面と什器の構成によって体験のリズムを設計した提案です。
+          </p>
+        </section>
+
+        <article class="detail-article">
+          <section class="detail-block">
+            <h2>概要</h2>
+            <div class="detail-prose">
+              <p>
+                この提案では、展示物を見るだけでなく、空間を移動すること自体が印象に残る体験になるように構成を考えました。視線が抜ける方向、
+                足を止める位置、色の切り替わりによる印象の変化を丁寧に整理し、限られたスペースの中で複数の場面が立ち上がるように設計しています。
+              </p>
+            </div>
+          </section>
+
+          <section class="detail-block">
+            <h2>背景</h2>
+            <div class="detail-prose">
+              <p>
+                ギャラリー空間では、展示物そのものに加えて、展示の順番や見る距離、次の空間への期待感が体験の質に大きく影響します。そこで今回は、
+                面としての色彩と立体としての什器を組み合わせ、展示の切り替わりが自然に感じられる空間構成を目指しました。
+              </p>
+            </div>
+          </section>
+
+          <section class="detail-block">
+            <h2>アプローチ</h2>
+            <div class="detail-prose">
+              <p>
+                色面を強く使いながらも、単なる装飾に見えないよう、什器と背景の関係を一体で組み立てています。見る角度によって情報量が変わるように、
+                正面だけでなく斜め方向からの見え方も前提にして、抜けと圧縮のリズムをつくりました。
+              </p>
+            </div>
+            <div class="detail-inline-media detail-inline-media-wide">
+              <img src="../../images/gallery-design-thumb.jpg" alt="Gallery Design perspective" />
+            </div>
+          </section>
+
+          <div class="detail-back-link-wrap">
+            <a class="detail-back-link" href="../index.html">BACK TO WORKS</a>
+          </div>
+        </article>
+      </main>
+
+      <footer class="top-footer">
+        <p>© Taichi Matsusaki</p>
+        <a class="back-to-top material-symbols-outlined" href="#top" aria-label="ページ上部へ戻る">expand_circle_up</a>
+      </footer>
+    </div>
+  </body>
+</html>

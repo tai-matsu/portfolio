@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Works | Taichi Matsusaki Portfolio</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <script>
+      window.addEventListener("load", () => {
+        const navigationEntry = performance.getEntriesByType?.("navigation")?.[0];
+        const isReload =
+          navigationEntry?.type === "reload" ||
+          (!navigationEntry && window.performance?.navigation?.type === 1);
+
+        if (isReload) {
+          window.scrollTo(0, 0);
+        }
+
+        document.body.classList.add("page-ready");
+
+        const menuButton = document.querySelector(".top-menu-toggle");
+        const navigation = document.querySelector(".top-nav");
+
+        if (!menuButton || !navigation) {
+          return;
+        }
+
+        const closeMenu = () => {
+          menuButton.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("nav-open");
+        };
+
+        menuButton.addEventListener("click", () => {
+          const expanded = menuButton.getAttribute("aria-expanded") === "true";
+          menuButton.setAttribute("aria-expanded", String(!expanded));
+          document.body.classList.toggle("nav-open", !expanded);
+        });
+
+        navigation.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+
+        window.matchMedia("(min-width: 641px)").addEventListener("change", (event) => {
+          if (event.matches) {
+            closeMenu();
+          }
+        });
+      });
+    </script>
+  </head>
+  <body class="top-entry works-page-entry">
+    <div class="page-shell works-page" id="top">
+      <header class="top-header">
+        <a class="top-logo" href="../index.html">Taichi Matsusaki</a>
+        <button
+          class="top-menu-toggle material-symbols-outlined"
+          type="button"
+          aria-label="メニューを開く"
+          aria-controls="works-navigation"
+          aria-expanded="false"
+        >
+          menu
+        </button>
+        <nav class="top-nav" id="works-navigation" aria-label="Primary navigation">
+          <a href="../index.html">Home</a>
+          <a href="../works/index.html" aria-current="page">Works</a>
+          <a href="../about/index.html">About</a>
+        </nav>
+      </header>
+
+      <main class="works-page-main">
+        <section class="works-page-intro">
+          <div class="section-title">
+            <h1>Works</h1>
+          </div>
+        </section>
+
+        <section class="works-section works-section-page">
+          <div class="works-grid">
+            <article class="work-item">
+              <a class="work-link" href="./works_detail/index.html">
+                <div class="work-thumb">
+                  <img src="../images/Kamiyama_thumb.png" alt="Kamiyama Third Place" />
+                </div>
+                <div class="work-body">
+                  <h3>Kamiyama Third Place</h3>
+                  <p>集合住宅における共用空間のあり方を考えた設計提案</p>
+                  <span class="work-chip">Space Design</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="work-item">
+              <a class="work-link" href="./works_detail/index.html">
+                <div class="work-thumb">
+                  <img src="../images/gallery-design-thumb.jpg" alt="Gallery Design" />
+                </div>
+                <div class="work-body">
+                  <h3>Gallery Design</h3>
+                  <p>ギャラリーの設計提案</p>
+                  <span class="work-chip">Space Design</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="work-item">
+              <a class="work-link" href="./works_detail/index.html">
+                <div class="work-thumb">
+                  <img src="../images/residence_thumb.png" alt="Residence Design" />
+                </div>
+                <div class="work-body">
+                  <h3>Residence Design</h3>
+                  <p>集合住宅における共用空間のあり方を考えた設計提案</p>
+                  <span class="work-chip">Space Design</span>
+                </div>
+              </a>
+            </article>
+
+            <article class="work-item work-item-xr">
+              <a class="work-link" href="./works_detail/index.html">
+                <div class="work-thumb">
+                  <img src="../images/xrInput_thumb.png" alt="XR Text Input" />
+                </div>
+                <div class="work-body">
+                  <h3>XR Text Input</h3>
+                  <p>XRによる文字入力</p>
+                  <span class="work-chip">XR</span>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <div class="detail-back-link-wrap">
+            <a class="detail-back-link" href="../index.html">BACK TO HOME</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="top-footer">
+        <p>© Taichi Matsusaki</p>
+        <a class="back-to-top material-symbols-outlined" href="#top" aria-label="ページ上部へ戻る">expand_circle_up</a>
+      </footer>
+    </div>
+  </body>
+</html>

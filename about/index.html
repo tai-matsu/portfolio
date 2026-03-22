@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Taichi Matsusaki Portfolio</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <script>
+      window.addEventListener("load", () => {
+        const navigationEntry = performance.getEntriesByType?.("navigation")?.[0];
+        const isReload =
+          navigationEntry?.type === "reload" ||
+          (!navigationEntry && window.performance?.navigation?.type === 1);
+
+        if (isReload) {
+          window.scrollTo(0, 0);
+        }
+
+        document.body.classList.add("page-ready");
+
+        const menuButton = document.querySelector(".top-menu-toggle");
+        const navigation = document.querySelector(".top-nav");
+
+        if (!menuButton || !navigation) {
+          return;
+        }
+
+        const closeMenu = () => {
+          menuButton.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("nav-open");
+        };
+
+        menuButton.addEventListener("click", () => {
+          const expanded = menuButton.getAttribute("aria-expanded") === "true";
+          menuButton.setAttribute("aria-expanded", String(!expanded));
+          document.body.classList.toggle("nav-open", !expanded);
+        });
+
+        navigation.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+
+        window.matchMedia("(min-width: 641px)").addEventListener("change", (event) => {
+          if (event.matches) {
+            closeMenu();
+          }
+        });
+      });
+    </script>
+  </head>
+  <body class="top-entry about-page-entry">
+    <div class="page-shell about-page" id="top">
+      <header class="top-header">
+        <a class="top-logo" href="../index.html">Taichi Matsusaki</a>
+        <button
+          class="top-menu-toggle material-symbols-outlined"
+          type="button"
+          aria-label="メニューを開く"
+          aria-controls="about-navigation"
+          aria-expanded="false"
+        >
+          menu
+        </button>
+        <nav class="top-nav" id="about-navigation" aria-label="Primary navigation">
+          <a href="../index.html">Home</a>
+          <a href="../works/index.html">Works</a>
+          <a href="../about/index.html" aria-current="page">About</a>
+        </nav>
+      </header>
+
+      <main class="about-page-main">
+        <section class="about-page-intro">
+          <div class="section-title">
+            <h1>About</h1>
+          </div>
+        </section>
+
+        <article class="about-page-content">
+          <section class="about-page-block">
+            <h2>Taichi Matsusaki</h2>
+            <div class="about-page-prose">
+              <p>
+                大学院で情報工学を、専門学校で空間デザインを学びました。研究を通して得た論理性と、空間や造形を学ぶ中で培った感性の両方を手がかりに、
+                ものや体験のあり方を考えています。
+              </p>
+            </div>
+          </section>
+
+          <section class="about-page-block">
+            <h2>関心領域</h2>
+            <div class="about-page-prose">
+              <p>
+                UI設計や情報設計のように、使われ方を整理しながら形にしていく領域に関心があります。一方で、空間や造形の視点から印象や振る舞いを考えることも
+                重要だと捉えており、論理と感性の両方から体験を設計したいと考えています。
+              </p>
+            </div>
+          </section>
+
+          <section class="about-page-block">
+            <h2>できること</h2>
+            <div class="about-page-tags" aria-label="Skills">
+              <span class="detail-tag">Information Design</span>
+              <span class="detail-tag">UI Design</span>
+              <span class="detail-tag">Frontend</span>
+              <span class="detail-tag">Space Design</span>
+            </div>
+          </section>
+
+          <section class="about-page-block">
+            <h2>資格</h2>
+            <div class="about-page-prose">
+              <p>情報系・デザイン系の学びをベースに、今後も必要に応じて追記していく想定です。</p>
+            </div>
+            <div class="about-page-tags" aria-label="Certifications">
+              <span class="detail-tag">基本情報技術者</span>
+              <span class="detail-tag">色彩検定</span>
+            </div>
+          </section>
+
+          <div class="detail-back-link-wrap">
+            <a class="detail-back-link" href="../index.html">BACK TO HOME</a>
+          </div>
+        </article>
+      </main>
+
+      <footer class="top-footer">
+        <p>© Taichi Matsusaki</p>
+        <a class="back-to-top material-symbols-outlined" href="#top" aria-label="ページ上部へ戻る">expand_circle_up</a>
+      </footer>
+    </div>
+  </body>
+</html>
