@@ -5,50 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About | Taichi Matsusaki Portfolio</title>
     <link rel="stylesheet" href="../styles.css" />
-    <script>
-      window.addEventListener("load", () => {
-        const navigationEntry = performance.getEntriesByType?.("navigation")?.[0];
-        const isReload =
-          navigationEntry?.type === "reload" ||
-          (!navigationEntry && window.performance?.navigation?.type === 1);
-
-        if (isReload) {
-          window.scrollTo(0, 0);
-        }
-
-        document.body.classList.add("page-ready");
-
-        const menuButton = document.querySelector(".top-menu-toggle");
-        const navigation = document.querySelector(".top-nav");
-
-        if (!menuButton || !navigation) {
-          return;
-        }
-
-        const closeMenu = () => {
-          menuButton.setAttribute("aria-expanded", "false");
-          document.body.classList.remove("nav-open");
-        };
-
-        menuButton.addEventListener("click", () => {
-          const expanded = menuButton.getAttribute("aria-expanded") === "true";
-          menuButton.setAttribute("aria-expanded", String(!expanded));
-          document.body.classList.toggle("nav-open", !expanded);
-        });
-
-        navigation.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", closeMenu);
-        });
-
-        window.matchMedia("(min-width: 641px)").addEventListener("change", (event) => {
-          if (event.matches) {
-            closeMenu();
-          }
-        });
-      });
-    </script>
+    <script src="../site.js" defer></script>
   </head>
-  <body class="top-entry about-page-entry">
+  <body class="top-entry">
     <div class="page-shell about-page" id="top">
       <header class="top-header">
         <a class="top-logo" href="../index.html">Taichi Matsusaki</a>
