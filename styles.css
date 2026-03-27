@@ -248,6 +248,7 @@ body.page-ready .hero-art img {
   margin: 0;
   color: var(--text);
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.9;
 }
 
@@ -265,11 +266,11 @@ body.page-ready .hero-art img {
 
 .about-page-block h2 {
   margin: 0;
-  font-size: 32px;
+  font-size: 28px;
   line-height: 1.1;
-  font-family: var(--body-font);
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.01em;
 }
 
@@ -278,10 +279,22 @@ body.page-ready .hero-art img {
   gap: 16px;
 }
 
+.about-inline-list {
+  margin: 0;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
 .about-page-prose p {
   margin: 0;
   color: var(--text);
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.95;
 }
 
@@ -360,8 +373,9 @@ body.page-ready .hero-art img {
 
 .work-body p {
   margin: 0;
-  color: var(--text);
+  color: #8a8a8a;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.65;
   transition: opacity 220ms ease;
 }
@@ -442,7 +456,7 @@ body.page-ready .hero-art img {
 .about-card h3 {
   font-family: var(--body-font);
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.1em;
   line-height: 1.05;
 }
@@ -451,6 +465,7 @@ body.page-ready .hero-art img {
   margin: 0;
   color: var(--text);
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.95;
 }
 
@@ -618,6 +633,10 @@ body.page-ready .hero-art img {
   width: min(760px, 100%);
 }
 
+.detail-lead {
+  font-weight: 500;
+}
+
 .detail-hero-media,
 .detail-gallery-item,
 .detail-inline-media {
@@ -642,6 +661,7 @@ body.page-ready .hero-art img {
 
 .detail-prose p {
   margin: 0;
+  font-weight: 500;
   line-height: 1.95;
   color: var(--text);
 }
@@ -661,11 +681,11 @@ body.page-ready .hero-art img {
 
 .detail-block h2 {
   margin: 0;
-  font-size: 32px;
+  font-size: 28px;
   line-height: 1.1;
-  font-family: var(--body-font);
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.01em;
 }
 
@@ -867,18 +887,6 @@ body.page-ready .hero-art img {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .top-header {
-    width: calc(100% + 32px);
-    margin: 0 -16px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .top-nav {
-    right: 0;
-    min-width: 128px;
   }
 
   .hero-art img {
