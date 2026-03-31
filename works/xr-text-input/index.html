@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XR Text Input | Taichi Matsusaki Portfolio</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <script src="../../works-data.js" defer></script>
+    <script src="../../site.js" defer></script>
+  </head>
+  <body class="top-entry detail-page">
+    <div class="page-shell" id="top">
+      <header class="top-header">
+        <a class="top-logo" href="../../index.html">Taichi Matsusaki</a>
+        <button
+          class="top-menu-toggle material-symbols-outlined"
+          type="button"
+          aria-label="メニューを開く"
+          aria-controls="detail-navigation"
+          aria-expanded="false"
+        >
+          menu
+        </button>
+        <nav class="top-nav" id="detail-navigation" aria-label="Primary navigation">
+          <a href="../../index.html">Home</a>
+          <a href="../index.html">Works</a>
+          <a href="../../about/index.html">About</a>
+        </nav>
+      </header>
+
+      <main class="detail-main">
+        <section class="detail-intro" data-work-key="xr">
+          <div class="detail-tags" aria-label="Project tags" data-work-tags></div>
+          <h1>XR Text Input</h1>
+          <div class="detail-hero-media">
+            <img src="../../images/XRInput/xrInput_thumb.png" alt="XR Text Input" />
+          </div>
+          <p class="detail-lead">
+            大学院で、ヘッドマウントディスプレイを用いたXR環境における文字入力インターフェースの研究・開発を行いました。
+          </p>
+        </section>
+
+        <article class="detail-article">
+          <section class="detail-block">
+            <h2>概要</h2>
+            <div class="detail-prose">
+              <p>
+                本研究では、XR環境における新たな文字入力インターフェースを提案しました。左右の手の指先や指関節を接触させて文字を入力することで、入力時の負荷を軽減しながら利用できる方法を目指しました。
+              </p>
+            </div>
+            <div class="detail-inline-media detail-inline-media-wide">
+              <img src="../../images/XRInput/finger_movie.gif" alt="XR Text Input finger interaction" />
+            </div>
+          </section>
+
+          <section class="detail-block">
+            <h2>背景</h2>
+            <div class="detail-prose">
+              <p>
+                ヘッドマウントディスプレイを用いたXR環境での文字入力では、ホログラムのキーボードによる入力が一般的です。一方で、こうした方法には、キーボードが視界を遮ってしまうことや、入力中にキーボードを見続ける必要があること、さらに腕が疲れやすいことなどの課題がありました。
+              </p>
+              <p>
+                そこで本研究では、これらの課題を解決する新たな文字入力インターフェースとして、指合わせによるXR文字入力インターフェースを開発しました。今回は、特にひらがな入力に焦点を当てて開発しています。
+              </p>
+            </div>
+          </section>
+
+          <section class="detail-block">
+            <h2>仕組み</h2>
+            <div class="detail-prose">
+              <p>
+                このインターフェースでは、左手に子音、右手に母音を割り当てています。それぞれの指先や指関節を接触させ、その組み合わせによって文字を入力します。
+              </p>
+              <p>
+                例えば、左手人差し指先と右手中指先を接触させることで「く」を入力する、というように、両手の組み合わせでひらがなを選択する仕組みです。手元で入力でき、手の感覚を頼りに操作できるため、視界を塞がず、腕の移動も抑えられるようにしています。
+              </p>
+            </div>
+            <div class="detail-inline-media detail-inline-media-wide">
+              <img src="../../images/XRInput/対応表.png" alt="XR Text Input mapping table" />
+            </div>
+          </section>
+
+          <div class="detail-back-link-wrap">
+            <a class="detail-back-link" href="../index.html">BACK TO WORKS</a>
+          </div>
+        </article>
+      </main>
+
+      <footer class="top-footer">
+        <p>© Taichi Matsusaki</p>
+        <a class="back-to-top material-symbols-outlined" href="#top" aria-label="ページ上部へ戻る">expand_circle_up</a>
+      </footer>
+    </div>
+  </body>
+</html>
