@@ -1,11 +1,14 @@
 window.WORKS_DATA = {
   kamiyama: {
-    tags: ["Student Project", "Space Design", "Complex"],
+    tags: ["Student Project", "Space Design"],
   },
   gallery: {
-    tags: ["Student Project", "Space Design", "Exhibition"],
+    tags: ["Student Project", "Space Design"],
+  },
+  "portfolio-site": {
+    tags: ["Personal Project", "Web Design"],
   },
   xr: {
-    tags: ["Student Project", "XR", "Interface"],
+    tags: ["Student Project", "XR"],
   },
 };

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Site | Taichi Matsusaki Portfolio</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <script src="../../works-data.js" defer></script>
+    <script src="../../site.js" defer></script>
+  </head>
+  <body class="top-entry detail-page">
+    <div class="page-shell" id="top">
+      <header class="top-header">
+        <a class="top-logo" href="../../index.html">Taichi Matsusaki</a>
+        <button
+          class="top-menu-toggle material-symbols-outlined"
+          type="button"
+          aria-label="メニューを開く"
+          aria-controls="detail-navigation"
+          aria-expanded="false"
+        >
+          menu
+        </button>
+        <nav class="top-nav" id="detail-navigation" aria-label="Primary navigation">
+          <a href="../../index.html">Home</a>
+          <a href="../index.html">Works</a>
+          <a href="../../about/index.html">About</a>
+        </nav>
+      </header>
+
+      <main class="detail-main">
+        <section class="detail-intro" data-work-key="portfolio-site">
+          <div class="detail-tags" aria-label="Project tags" data-work-tags></div>
+          <h1>Portfolio Site</h1>
+          <div class="detail-hero-media">
+            <img src="../../images/PortfolioSite/portfolioSite_thumb.jpg" alt="Portfolio Site" />
+          </div>
+          <p class="detail-lead">
+            個人ポートフォリオサイトとして、制作物と自分の考え方を伝えるWebサイトを設計・実装しました。
+          </p>
+        </section>
+
+        <article class="detail-article">
+          <section class="detail-block">
+            <h2>概要</h2>
+            <div class="detail-prose">
+              <p>
+                この作品は、自分の制作物を掲載し、今後の対外発信用に使用することを目的に制作した個人ポートフォリオサイトです。構成はTOPページ、制作物一覧ページ、
+                制作物詳細ページ、自己紹介ページとなっています。制作物詳細ページでは、制作物の内容だけでなく、制作の背景や考え方まで伝わるように整理しました。
+              </p>
+            </div>
+          </section>
+
+          <section class="detail-block">
+            <h2>背景</h2>
+            <div class="detail-prose">
+              <p>
+                これまでに制作してきたものや、どのような考え方で制作に向き合ってきたのかを伝える媒体としてポートフォリオを制作しました。
+              </p>
+              <p>
+                また、要件定義、情報設計、ビジュアルデザイン、実装までを一通り行うことで、実務に必要な視点やスキルを磨くことも目的の一つとして制作しました。
+              </p>
+            </div>
+          </section>
+
+          <section class="detail-block">
+            <h2>制作の進め方</h2>
+            <div class="detail-prose">
+              <p>
+                まず要件定義を行い、サイトの目的、掲載する情報、必要なページ構成を整理しました。その後、要件をもとにデザインの方向性を定め、Figmaで各ページの導線設計、
+                レイアウト、ビジュアルまで含めて具体化しました。
+              </p>
+              <p>
+                続いて、そのデザインをもとに実装を進めました。実装の過程では、視認性や使いやすさ、実際の画面上での印象を確認しながら細部を調整し、
+                レスポンシブ表示も含めて一通り閲覧できる状態まで仕上げました。
+              </p>
+            </div>
+          </section>
+
+          <section class="detail-block">
+            <h2>情報設計</h2>
+            <div class="detail-prose">
+              <p>
+                情報設計では、入口となるTOPページでサイト全体の内容が把握できることを重視しました。
+              </p>
+              <p>
+                ヒーローエリアでサイトの印象をつくり、その下に Works と About を配置することで、まず制作物を見せ、その後に人物像が伝わる流れにしています。
+              </p>
+              <p>
+                Worksページでは制作物を一覧で見せ、詳細ページでは背景やアプローチまで読める構成とすることで、何を作ったかだけでなく、どのように考えて制作したかが分かるようにしました。
+              </p>
+              <p>
+                Aboutページでは自己紹介、関心領域、スキル、資格をシンプルに整理し、情報が散らからずに読めるようにしています。
+              </p>
+              <p>
+                また、ファーストビューのアニメーションについては、サイトの印象づけには有効である一方、長すぎると閲覧体験を損なうと考え、控えめな表現にとどめました。
+              </p>
+            </div>
+          </section>
+
+          <section class="detail-block">
+            <h2>ビジュアルデザイン</h2>
+            <div class="detail-prose">
+              <p>
+                デザインでは、全体として落ち着きがあり、整理されていて、過度に装飾的にならないことを意識しました。見た目の強さよりも、余白、文字組み、整列によって静かで読みやすい印象をつくることを重視しています。
+              </p>
+              <p>
+                配色は、薄いベージュを基調とした背景に、チャコールグレーの文字を組み合わせ、黒の強さを少し抑えたやわらかい印象にしました。アクセントには落ち着いた緑を限定的に用い、全体のトーンを崩さずに視線のきっかけをつくっています。
+              </p>
+              <p>
+                また、ヒーローエリアのビジュアルには、自分自身のあり方を重ねています。大学院で情報工学を学び、専門学校で空間デザインを学んだ経験から、論理と感性の両方を行き来しながら制作することを大切にしてきました。そこで、
+                論理を象徴する四角と、感性を象徴する円を重ね合わせることで、自分の制作姿勢を静かに表現しました。
+              </p>
+            </div>
+          </section>
+
+          <section class="detail-block">
+            <h2>実装</h2>
+            <div class="detail-prose">
+              <p>
+                実装では、Codexを活用しながら制作を進めました。大枠の構造や実装量の多い部分はCodexによって実装しつつ、細かな調整や意図に関わる部分は自分で手を入れ、
+                デザインとの整合を取りながら仕上げました。
+              </p>
+            </div>
+          </section>
+
+          <section class="detail-block">
+            <h2>今後の改善</h2>
+            <div class="detail-prose">
+              <p>
+                今後は掲載する制作物の追加にあわせて詳細ページを増やし、サイト全体の見せ方や導線も継続的に改善していく予定です。また、ポートフォリオサイト自体を情報設計や見せ方を試す場として捉え、
+                制作物を蓄積しながら、サイト全体の完成度も高めていきたいと考えています。
+              </p>
+            </div>
+          </section>
+
+          <section class="detail-block">
+            <h2>TOPページイメージ</h2>
+            <div class="detail-media-stack">
+              <h3>PC</h3>
+              <div class="detail-scroll-media">
+                <img src="../../images/PortfolioSite/portfolioSite_PC.png" alt="Portfolio Site desktop screen" />
+              </div>
+            </div>
+            <div class="detail-media-stack">
+              <h3>スマートフォン</h3>
+              <div class="detail-scroll-media detail-scroll-media-portrait">
+                <img src="../../images/PortfolioSite/portfolioSite_SP.png" alt="Portfolio Site mobile screen" />
+              </div>
+            </div>
+          </section>
+
+          <div class="detail-back-link-wrap">
+            <a class="detail-back-link" href="../index.html">BACK TO WORKS</a>
+          </div>
+        </article>
+      </main>
+
+      <footer class="top-footer">
+        <p>© Taichi Matsusaki</p>
+        <a class="back-to-top material-symbols-outlined" href="#top" aria-label="ページ上部へ戻る">expand_circle_up</a>
+      </footer>
+    </div>
+  </body>
+</html>
