@@ -242,6 +242,39 @@ body.page-ready .hero-art img {
   padding-top: 40px;
 }
 
+.works-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.works-filter-chip {
+  appearance: none;
+  border: 1px solid #e3e3e3;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #242424;
+  min-height: 40px;
+  padding: 8px 16px;
+  font-family: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    opacity 220ms ease;
+}
+
+.works-filter-chip.is-active {
+  border-color: var(--accent-green);
+  background: var(--accent-green);
+  color: #ffffff;
+}
+
 .about-page-content {
   display: grid;
   gap: 80px;
@@ -311,6 +344,10 @@ body.page-ready .hero-art img {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 56px 80px;
+}
+
+.works-grid .work-item[hidden] {
+  display: none;
 }
 
 .work-link {
@@ -823,6 +860,16 @@ body.page-ready .hero-art img {
   .about-page-intro {
     gap: 20px;
     padding-top: 16px;
+  }
+
+  .works-filters {
+    gap: 8px;
+  }
+
+  .works-filter-chip {
+    min-height: 36px;
+    padding: 8px 14px;
+    font-size: 13px;
   }
 
   .about-page-content {
